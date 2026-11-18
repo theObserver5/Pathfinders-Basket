@@ -1,4 +1,9 @@
-const images = Array.from(document.querySelectorAll('.gallery img, .photo-gallery img'));
+document.querySelectorAll('.collage img').forEach(img => {
+  const setRatio = () => img.style.setProperty('--r', img.naturalWidth / img.naturalHeight);
+  if (img.complete) setRatio();
+  else img.addEventListener('load', setRatio);
+});
+const images = Array.from(document.querySelectorAll('.gallery img, .photo-gallery img, .collage img'));
 const box = document.getElementById('lightbox');
 const bigImg = box.querySelector('.lb-img');
 let current = 0;
