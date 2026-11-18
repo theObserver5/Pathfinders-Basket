@@ -115,3 +115,28 @@ h1   { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; letter-spaci
 .lb-close { top: 0.5rem; right: 1rem; }
 .lb-prev  { left: 0.5rem; }
 .lb-next  { right: 0.5rem; }
+
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.collage img {
+  --r: 1.5;  /* set automatically by the script */
+  --s: 1;    /* size multiplier */
+  flex-grow: calc(var(--r) * var(--s) * 100);
+  flex-basis: calc(var(--r) * var(--s) * 200px);
+  height: auto;
+  max-width: 100%;
+  cursor: zoom-in;
+}
+
+.collage img.lg { --s: 1.5; }
+.collage img.sm { --s: 0.7; }
+
+.collage::after {
+  content: '';
+  flex-grow: 100000;
+}
