@@ -135,6 +135,8 @@ h1   { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; letter-spaci
 
 .collage img.lg { --s: 1.5; }
 .collage img.sm { --s: 0.7; }
+.doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.door img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
 
 .collage::after {
   content: '';
