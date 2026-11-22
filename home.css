@@ -1,0 +1,67 @@
+/* Homepage only. Linked after style.css in index.html. */
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(20, 18, 15, 0.35), rgba(20, 18, 15, 0.35)),
+    url("photography images/photo-10.JPG") center / cover no-repeat;
+  color: #f5f1ea;
+}
+
+.hero-text { padding: 2rem 1rem; }
+
+.hero h1 {
+  font-size: clamp(2.6rem, 10vw, 6.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.hero-seal {
+  width: clamp(56px, 9vw, 84px);
+  height: auto;
+  margin-top: 1.25rem;
+}
+
+.hero p {
+  margin: 1rem 0 0;
+  letter-spacing: 0.04em;
+}
+
+.doors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.door {
+  position: relative;
+  display: block;
+  color: #f5f1ea;
+  text-decoration: none;
+}
+
+.door img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.door span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+  body { padding: 1.5rem 1rem; }
+}
