@@ -1,0 +1,37 @@
+/* Shared by every page. Link it AFTER style.css. */
+
+:root {
+  --paper: #f5f1ea;
+  --ink: #222;
+  --red: #c1121f;     /* the one red: seal, hover, small accents */
+  --moss: #5f7a3a;    /* pulled from the hillside photo; try it, change it, or delete it */
+  --radius: 18px;
+}
+
+/* Header: seal top-left, nav beside it */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-bottom: 2.5rem;
+}
+.site-header nav { margin-bottom: 0; flex-wrap: wrap; }
+.site-seal img { width: 56px; height: 56px; display: block; }
+
+/* Rounded corners: gallery images, squares, lightbox, hero */
+.photo-gallery img,
+.gallery img,
+.collage img,
+.door img,
+.lb-img {
+  border-radius: var(--radius);
+}
+
+/* Phone: breathing room */
+@media (max-width: 600px) {
+  body { padding: 1.25rem 1rem; }
+  .site-header { margin-bottom: 1.5rem; }
+  .photo-gallery { columns: 2 140px; }
+}

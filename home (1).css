@@ -1,0 +1,67 @@
+/* Homepage only. Linked after style.css and polish.css in index.html. */
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(20, 18, 15, 0.35), rgba(20, 18, 15, 0.35)),
+    url("photography images/photo-10.JPG") center / cover no-repeat;
+  color: #f5f1ea;
+}
+
+.hero-text { padding: 2rem 1.25rem; }
+
+.hero h1 {
+  font-size: clamp(2.6rem, 10vw, 6.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.hero p {
+  margin: 1.25rem 0 0;
+  letter-spacing: 0.04em;
+}
+
+.doors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.door {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.door img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Pill label */
+.door span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.door:hover span {
+  background: var(--red);
+  color: var(--paper);
+}
